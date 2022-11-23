@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Chart,registerables} from 'chart.js';
+Chart.register(...registerables);
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+  ngOnInit(): void{    
+    this.RenderChart();
+   }
+   RenderChart(){
+     const ctx = document.getElementById('myChart');
+ 
+   new Chart("myChart", {
+     type: 'bar',
+     data: {
+       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+       datasets: [{
+         label: '# of Votes',
+         data: [12, 19, 3, 5, 2, 3],
+         borderWidth: 1
+       }]
+     },
+     options: {
+       scales: {
+         y: {
+           beginAtZero: true
+         }
+       }
+     }
+   });
+   }
+ }  
