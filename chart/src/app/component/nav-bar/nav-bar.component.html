@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <a mat-raised-button  routerLink="home"><img
+        src="../../../assets/icon.png"
+        height="40"
+        alt=""
+        /></a>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <a mat-raised-button routerLink="men">ผู้ชาย</a>
+    <a mat-raised-button routerLink="women">ผู้หญิง</a>
+
+</mat-toolbar>
