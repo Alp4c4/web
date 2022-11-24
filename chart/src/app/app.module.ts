@@ -12,8 +12,11 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ChartWomenComponent } from './component/chart-women/chart-women.component';
 import { environment } from '../environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/database';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 @NgModule({
   declarations: [
