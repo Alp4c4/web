@@ -19,10 +19,17 @@ export class ChartWomenComponent implements OnInit {
   new Chart("myChart", {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: [ 'ระดับรุนแรง', 'ระดับปานกลาง', 'ระดับน้อย','ไม่มีอาการหรือมีน้อย' ],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'ช่วงอายุ20-25ปี',
+        data: [100, 20, 30, 10],
+        backgroundColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(255, 205, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+         
+        ],
         borderWidth: 1
       }]
     },

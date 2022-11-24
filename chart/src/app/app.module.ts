@@ -11,6 +11,9 @@ import { HomeComponent } from './component/home/home.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ChartWomenComponent } from './component/chart-women/chart-women.component';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { ChartWomenComponent } from './component/chart-women/chart-women.compone
     ChartComponent,
     HomeComponent,
     NavBarComponent,
-    ChartWomenComponent
+    ChartWomenComponent,
+    AppComponent,
   ],
   imports: [
     MatSlideToggleModule,
@@ -27,8 +31,9 @@ import { ChartWomenComponent } from './component/chart-women/chart-women.compone
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
-    MatTreeModule
-    
+    MatTreeModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "depreesion-4eb38": {
+      "hosting": {
+        "chart": [
+          "depreesion-4eb38"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "depreesion-4eb38"
+  }
+}
