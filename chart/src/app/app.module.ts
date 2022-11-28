@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
@@ -17,7 +18,10 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-
+ 
+// import {Firestore} from '@angular/fire/firestore'
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +30,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     NavBarComponent,
     ChartWomenComponent,
     AppComponent,
+   
   ],
   imports: [
     MatSlideToggleModule,
@@ -35,8 +40,11 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     MatButtonModule,
     MatMenuModule,
     MatTreeModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    // AngularFireModule.initializeApp(environment),
+    AngularFirestoreModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConFig)),
+    provideFirestore(() => getFirestore()),
+    // Firestore
   ],
   providers: [],
   bootstrap: [AppComponent]
