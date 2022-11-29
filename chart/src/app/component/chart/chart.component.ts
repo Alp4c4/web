@@ -81,7 +81,7 @@ export class ChartComponent implements OnInit {
             ],
             datasets: [
               {
-                label: 'ช่วงอายุ20-25ปี',
+                label: '',
                 data: arr,
                 backgroundColor: [
                   'rgba(255, 99, 132, 1)',
