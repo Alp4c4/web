@@ -1,0 +1,65 @@
+
+<h1>ประวัติการทำประเมินย้อนหลัง</h1>
+
+
+<form (ngSubmit)="onSubmit()" >
+    <input type="text" [(ngModel)]="fullName" placeholder="กรอก ชื่อ นามสกุล">
+    <button type="submit" >Submit</button>
+  </form>
+  <select [(ngModel)]="selectedValue">
+        <option  *ngFor="let item of tem;let i=index"[value]="i">{{i+1}}</option>
+    </select>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Topic</th>
+            <th>Status</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <!-- <div *ngIf=">0">
+        {{items[selectedValue]}}
+        </div> -->
+    <tbody>
+        <tr [(ngModel)]="items">
+        <td>Bored</td>
+        <td>{{items[0]}}</td>
+        <td rowspan="9">{{items[9]}}</td>
+       </tr> 
+       <tr>
+        <td>Concentration</td>
+        <td>{{items[1]}}</td>
+       </tr> 
+       <tr>
+        <td>Concern</td>
+        <td>{{items[2]}}</td>
+       </tr> 
+       <tr>
+        <td>Doslow</td>
+        <td>{{items[3]}}</td>
+       </tr> 
+      <tr>
+        <td>Hurtyourself</td>
+        <td>{{items[4]}}</td>
+       </tr>
+       <tr>
+        <td>Meal</td>
+        <td>{{items[5]}}</td>
+       </tr> 
+       <tr>
+        <td>Myself</td>
+        <td>{{items[6]}}</td>
+       </tr>  
+       <tr>
+        <td>Sleep</td>
+        <td>{{items[7]}}</td>
+       </tr> 
+       <tr>
+        <td>Tired</td>
+        <td>{{items[8]}}</td>
+       </tr> 
+    </tbody>
+    
+</table>

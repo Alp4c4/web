@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -22,6 +23,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 // import {Firestore} from '@angular/fire/firestore'
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { SearchPageComponent } from './component/search-page/search-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestbaseComponent } from './component/testbase/testbase.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +35,14 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     NavBarComponent,
     ChartWomenComponent,
     AppComponent,
+    SearchPageComponent,
+    TestbaseComponent,
    
   ],
   imports: [
     MatSlideToggleModule,
     BrowserModule,
+    BrowserModule, FormsModule ,
     AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
@@ -45,6 +52,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     AngularFirestoreModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConFig)),
     provideFirestore(() => getFirestore()),
+    BrowserAnimationsModule,
     // Firestore
   ],
   providers: [],

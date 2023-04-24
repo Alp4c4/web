@@ -54,10 +54,8 @@ export class ChartWomenComponent implements OnInit {
             }
           }
         });
-        let arr = [little, middle, high, none];
-        console.log(arr);
         const ctx = document.getElementById('myChart');
-        new Chart('myChart', {
+        new Chart('myChart1', {
           type: 'bar',
           data: {
             labels: [
@@ -69,7 +67,7 @@ export class ChartWomenComponent implements OnInit {
             datasets: [
               {
                 label: '',
-                data: arr,
+                data: arr3,
                 backgroundColor: [
                   'rgba(255, 99, 132, 1)',
                   'rgba(255, 159, 64, 1)',

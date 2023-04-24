@@ -28,7 +28,7 @@ export class ChartComponent implements OnInit {
   }
   constructor(public dv: ServiceService) {}
   RenderChart() {
-    this.dv.getdata().subscribe((res: Dataservice[]) => {
+    // this.dv.getdata().subscribe((res: Dataservice[]) => {
       let arr3: any = [];
       let little: any = 0;
       let middle: any = 0;
@@ -67,8 +67,6 @@ export class ChartComponent implements OnInit {
             }
           }
         });
-        let arr = [little, middle, high, none];
-        console.log(arr);
         const ctx = document.getElementById('myChart');
         new Chart('myChart', {
           type: 'bar',
@@ -82,7 +80,7 @@ export class ChartComponent implements OnInit {
             datasets: [
               {
                 label: '',
-                data: arr,
+                data: arr3,
                 backgroundColor: [
                   'rgba(255, 99, 132, 1)',
                   'rgba(255, 159, 64, 1)',
@@ -104,7 +102,7 @@ export class ChartComponent implements OnInit {
       });
 
      
-    });
+    // });
   }
 }
 
