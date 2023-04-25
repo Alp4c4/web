@@ -1,14 +1,15 @@
 
 <h1>ประวัติการทำประเมินย้อนหลัง</h1>
 
-
-<form (ngSubmit)="onSubmit()" >
-    <input type="text" [(ngModel)]="fullName" placeholder="กรอก ชื่อ นามสกุล">
-    <button type="submit" >Submit</button>
-  </form>
-  <select [(ngModel)]="selectedValue">
-        <option  *ngFor="let item of tem;let i=index"[value]="i">{{i+1}}</option>
-    </select>
+<div >
+    <form (ngSubmit)="onSubmit()" >
+        <input type="text" [(ngModel)]="fullName" placeholder="กรอก ชื่อ นามสกุล">
+        <button type="submit" >Submit</button>
+      </form> 
+       <select [(ngModel)]="selectedValue">
+            <option  *ngFor="let item of tem;let i=index"[value]="i">{{i+1}}</option>
+        </select>
+</div> 
 
 
 <table class="table table-bordered">
@@ -19,47 +20,48 @@
             <th>Result</th>
         </tr>
     </thead>
-    <!-- <div *ngIf=">0">
-        {{items[selectedValue]}}
-        </div> -->
     <tbody>
         <tr [(ngModel)]="items">
-        <td>Bored</td>
+        <td>เบื่อ</td>
         <td>{{items[0]}}</td>
         <td rowspan="9">{{items[9]}}</td>
        </tr> 
        <tr>
-        <td>Concentration</td>
+        <td>ไม่มีสมาธิ</td>
         <td>{{items[1]}}</td>
        </tr> 
        <tr>
-        <td>Concern</td>
+        <td>เรื่องเครียด</td>
         <td>{{items[2]}}</td>
        </tr> 
        <tr>
-        <td>Doslow</td>
+        <td>ทำอะไรช้าลง</td>
         <td>{{items[3]}}</td>
        </tr> 
       <tr>
-        <td>Hurtyourself</td>
+        <td>คิดทำร้ายตัวเอง</td>
         <td>{{items[4]}}</td>
        </tr>
        <tr>
-        <td>Meal</td>
+        <td>เบื่ออาหาร</td>
         <td>{{items[5]}}</td>
        </tr> 
        <tr>
-        <td>Myself</td>
+        <td>รู้สึกไม่ดีกับตัวเอง</td>
         <td>{{items[6]}}</td>
        </tr>  
        <tr>
-        <td>Sleep</td>
+        <td>หลับยาก</td>
         <td>{{items[7]}}</td>
        </tr> 
        <tr>
-        <td>Tired</td>
+        <td>เหนื่อยง่าย</td>
         <td>{{items[8]}}</td>
        </tr> 
     </tbody>
     
 </table>
+<div style="height:50vh; width:50vw">
+ 
+     <canvas id="myChart"></canvas>
+ </div> 
