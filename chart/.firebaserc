@@ -1,4 +1,8 @@
 {
+  "projects": {
+    "default": "depreesion-4eb38",
+    "dist": "depreesion-4eb38"
+  },
   "targets": {
     "depreesion-4eb38": {
       "hosting": {
@@ -8,7 +12,5 @@
       }
     }
   },
-  "projects": {
-    "default": "depreesion-4eb38"
-  }
+  "etags": {}
 }
